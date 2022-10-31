@@ -2,6 +2,8 @@
     margin-right: 10px;
     text-decoration: none;
     color: black;
+    font-size: 18px;
+    font-weight: 400;
 }
 .header nav a:hover{
     color: goldenrod;
