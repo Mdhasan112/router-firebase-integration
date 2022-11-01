@@ -14,20 +14,22 @@ const useFirebase = () => {
                 const user = result.user
                 setUser(user)
             });
-           
+
     };
-   const  handleSignOut = () => {
+    const handleSignOut = () => {
         signOut(auth)
-        .then(() => {
+            .then(() => { });
+    };
 
-        });
-    }
-
-    useEffect(()=>{
-        onAuthStateChanged(auth, user=> {
+    useEffect(() => {
+        onAuthStateChanged(auth, user => {
             setUser(user);
         })
     }, []);
-    return {user, googleSignIn, handleSignOut};
+    return {
+        user,
+        googleSignIn,
+        handleSignOut
+    };
 }
 export default useFirebase;
